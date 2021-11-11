@@ -1,0 +1,556 @@
+GIT CAMMANDS:
+
+git help:-  It provides frequently used several git commands
+
+git help <cmd-name>:- It opens documentation of that particular command
+
+git init :- It is used to create empty repository or re-initialize exsting repo
+
+git status :- This command will display status of current repository
+
+Staged Files:
+----------------
+Files Which are added  and they are ready to commit.
+These file names will be displayed in green color
+
+Un-Staged Files:
+----------------
+Modified files will be displayed here, we need to stage these files to commit.
+These file names will be displayed in red color
+
+Un-Tracked Files:
+-------------------
+Newly created files, we need to stage them to commit.
+These file names also will be displayed in red color
+
+git add:- This command is used to add file to staging area
+	
+	syntax : git add <file name>
+	syntax : git add --a
+		 git add . ======>To add all files at a time
+
+git rm:- This command is used to un-stage newly created files
+	syntax: git rm --cached <filename>
+
+git commit:- This command is used to commit our changes to git local repository
+
+	syntax: git commit -m 'commit msg'.
+
+Note: When we execute commit command it will consider all the files which are in staging area.
+
+Note: Git local repository will be available in our machine only.
+
+--------To commit our files to remote repository we should execute blew commands---------
+
+1) git remote add <repo-url>(This requires only first time)
+2) git push -u origin master(This is used to move changes from local to central)
+
+git reset:- It is used to unstage a flie
+	syntax: git reset HEAD <file-name>
+
+git checkout:- It is used to discard changes done in a file
+	syntax: git checkout --<file-name>
+
+ 
+When we make changes to files we need to stage them to commit
+
+-> To add file(s) to staging area we will use add command
+-> To commit file(s) to local repo we will use commit command
+
+Note: We should provide reason for commit as a message
+-> To publish local commits to central repository we will use push command
+-> When ve commit, git will generate commit-id
+-> Commit id contains 40 alphanumerics characters
+-> From 40 alphanumeric characters it will display first 6 characters to use
+
+git log-> To check commits history we will use git log command
+	syntax: git log
+-> In commit logs it will display below datails
+		a) commit-id
+		b) author
+		c) timestamp
+		d) commit msg
+
+
+git clone:- To take existing project from repository to local system we will use git clone command.
+		syntax: git clone <rep-url>
+
+ git pull:- Before making any changes to file(s) in local, it is highly recommended to take lastest changes from repository. To take latest changes from repository we will use git pull command 
+		syntax: got pull
+
+
+what is difference b/w pull and clone...?
+what is difference b/w pull and push....?
+waht is difference b/w clone and commit...?
+what is difference b/w push and commit...? 
+
+
+
+
+
+
+
+
+
+   GIT HUB PUSH CAMMANDS
+1.	git init 
+2.	git remote add origin repository url
+3.	git add --all
+4.	git config --global user.name"" 
+5.	git config --global user.email"' 
+6.	git commit -m "comment/Name of the program"  
+7.	git push -u origin master
+Other Method
+1.	ls
+2.	git init
+3.	git add .
+4.	git add –all
+5.	git commit -m "comment" 
+6.	git remote add origin repository url
+7.	git push –u origin master
+
+ GIT HUB Branch CAMMANDS
+1.	git init
+2.	git add .
+3.	git commit -m "First program"
+4.	git branch -M  "Fuse-React"
+
+git add –A (if we get any error we can give command)
+5.	git remote add origin link/https://github.com/meganensar/git
+6.	git push -u origin "Fuse-React"
+
+GIT HUB MODIFIED CAMMANDS
+1.	git status
+2.	git add –all
+3.	git commit –m ‘like modified file name’
+4.	git push
+
+
+
+git init 
+git remote add origin repository url
+git add --all
+git config --global user.name"" 
+git config --global user.email"' 
+git commit -m "comment"  
+git push -u origin master
+
+
+
+Akhi@MSI MINGW64 /g/React/Vizen (main)
+$ ls
+debug.log  node_modules/  package.json  package-lock.json  public/  src/
+
+Akhi@MSI MINGW64 /g/React/Vizen (main)
+$ git init
+Reinitialized existing Git repository in G:/React/Vizen/.git/
+
+Akhi@MSI MINGW64 /g/React/Vizen (main)
+$ git add --all
+
+Akhi@MSI MINGW64 /g/React/Vizen (main)
+$ git commit -m "comment" 
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'Akhi@MSI.(none)')
+
+Akhi@MSI MINGW64 /g/React/Vizen (main)
+$ git config --global user.name"megan"
+
+Akhi@MSI MINGW64 /g/React/Vizen (main)
+$ git config --global user.email"megan@ensarsolutions.com"
+
+Akhi@MSI MINGW64 /g/React/Vizen (main)
+$ git commit -m "comment" 
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'Akhi@MSI.(none)')
+
+Akhi@MSI MINGW64 /g/React/Vizen (main)
+$ git commit -m "React/Vizen" 
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'Akhi@MSI.(none)')
+
+Akhi@MSI MINGW64 /g/React/Vizen (main)
+$ git commit -m "Vizen" 
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'Akhi@MSI.(none)')
+
+Akhi@MSI MINGW64 /g/React/Vizen (main)
+$ ^C
+
+Akhi@MSI MINGW64 /g/React/Vizen (main)
+$ git config --global user.email "megan@ensarsolutions.com"
+
+Akhi@MSI MINGW64 /g/React/Vizen (main)
+$ git config --global user.name "megan"
+
+Akhi@MSI MINGW64 /g/React/Vizen (main)
+$ git commit -m "Vizen" 
+[main 50cb34d] Vizen┬á
+ 10 files changed, 822 insertions(+), 42 deletions(-)
+ create mode 100644 debug.log
+ create mode 100644 src/components/dashboard/Ctperformance.jsx
+ create mode 100644 src/components/dashboard/Logout.jsx
+ create mode 100644 src/components/dashboard/chart.jsx
+ create mode 100644 src/components/dashboard/chartjs-data.jsx
+ create mode 100644 src/components/dashboard/charts.jsx
+ create mode 100644 src/components/dashboard/predictiveanalytics.jsx
+
+Akhi@MSI MINGW64 /g/React/Vizen (main)
+$ git remote -v
+origin  https://github.com/meganensar/Akhil.git (fetch)
+origin  https://github.com/meganensar/Akhil.git (push)
+original        https://github.com/meganensar/Akhil-React-extreme.git (fetch)
+original        https://github.com/meganensar/Akhil-React-extreme.git (push)
+originl https://github.com/meganensar/vizen-akhil.git (fetch)
+originl https://github.com/meganensar/vizen-akhil.git (push)
+
+Akhi@MSI MINGW64 /g/React/Vizen (main)
+$ git push -u original main
+Enumerating objects: 30, done.
+Counting objects: 100% (30/30), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (16/16), done.
+Writing objects: 100% (19/19), 6.40 KiB | 1.28 MiB/s, done.
+Total 19 (delta 7), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (7/7), completed with 7 local objects.
+To https://github.com/meganensar/Akhil-React-extreme.git
+   21a7436..50cb34d  main -> main
+Branch 'main' set up to track remote branch 'main' from 'original'.
+
+Akhi@MSI MINGW64 /g/React/Vizen (main)
+$
+
+
+
+Akhi@MSI MINGW64 /g/Bootstrap4 (main)
+$ ls
+Bootstrap/  index.html  index2.html
+
+Akhi@MSI MINGW64 /g/Bootstrap4 (main)
+$ git init
+Reinitialized existing Git repository in G:/Bootstrap4/.git/
+
+Akhi@MSI MINGW64 /g/Bootstrap4 (main)
+$ git add README.md
+fatal: pathspec 'README.md' did not match any files
+
+Akhi@MSI MINGW64 /g/Bootstrap4 (main)
+$ gitgit commit -m "Bootstrap4"
+On branch main
+nothing to commit, working tree clean
+
+Akhi@MSI MINGW64 /g/Bootstrap4 (main)
+$ git branch -M main
+
+Akhi@MSI MINGW64 /g/Bootstrap4 (main)
+$ git remote -v
+origin  https://github.com/meganensar/Bootstrap-Akhil.git (fetch)
+origin  https://github.com/meganensar/Bootstrap-Akhil.git (push)
+
+Akhi@MSI MINGW64 /g/Bootstrap4 (main)
+$ git push -u origin main
+Enumerating objects: 27, done.
+Counting objects: 100% (27/27), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (27/27), done.
+Writing objects: 100% (27/27), 367.94 KiB | 1.85 MiB/s, done.
+Total 27 (delta 11), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (11/11), done.
+To https://github.com/meganensar/Bootstrap-Akhil.git
+ * [new branch]      main -> main
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+
+Akhi@MSI MINGW64 /g/Bootstrap4 (main)
+$
+
+
+
+
+
+
+
+
+
+Akhi@MSI MINGW64 ~/piechart (main)
+$ ls
+node_modules/  package.json  package-lock.json  public/  README.md  src/
+
+Akhi@MSI MINGW64 ~/piechart (main)
+$ git init
+Reinitialized existing Git repository in C:/Users/Akhi/piechart/.git/
+
+Akhi@MSI MINGW64 ~/piechart (main)
+$ git add README.md
+
+Akhi@MSI MINGW64 ~/piechart (main)
+$ git commit -m "piechart"
+On branch main
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+Akhi@MSI MINGW64 ~/piechart (main)
+$ git commit -m "first commit"
+On branch main
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+Akhi@MSI MINGW64 ~/piechart (main)
+$ git branch -M main
+
+Akhi@MSI MINGW64 ~/piechart (main)
+$ git remote add origin https://github.com/meganensar/Akhil.git
+fatal: remote origin already exists.
+
+Akhi@MSI MINGW64 ~/piechart (main)
+$ git remote -v
+origin  https://github.com/Akhilkumar0143/barchart.git (fetch)
+origin  https://github.com/Akhilkumar0143/barchart.git (push)
+
+Akhi@MSI MINGW64 ~/piechart (main)
+$ git remote -v change
+error: Unknown subcommand: change
+usage: git remote [-v | --verbose]
+   or: git remote add [-t <branch>] [-m <master>] [-f] [--tags | --no-tags] [--mirror=<fetch|push>] <name> <url>
+   or: git remote rename <old> <new>
+   or: git remote remove <name>
+   or: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+   or: git remote [-v | --verbose] show [-n] <name>
+   or: git remote prune [-n | --dry-run] <name>
+   or: git remote [-v | --verbose] update [-p | --prune] [(<group> | <remote>)...]
+   or: git remote set-branches [--add] <name> <branch>...
+   or: git remote get-url [--push] [--all] <name>
+   or: git remote set-url [--push] <name> <newurl> [<oldurl>]
+   or: git remote set-url --add <name> <newurl>
+   or: git remote set-url --delete <name> <url>
+
+    -v, --verbose         be verbose; must be placed before a subcommand
+
+
+Akhi@MSI MINGW64 ~/piechart (main)
+$ git help
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone             Clone a repository into a new directory
+   init              Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add               Add file contents to the index
+   mv                Move or rename a file, a directory, or a symlink
+   restore           Restore working tree files
+   rm                Remove files from the working tree and from the index
+   sparse-checkout   Initialize and modify the sparse-checkout
+
+examine the history and state (see also: git help revisions)
+   bisect            Use binary search to find the commit that introduced a bug
+   diff              Show changes between commits, commit and working tree, etc
+   grep              Print lines matching a pattern
+   log               Show commit logs
+   show              Show various types of objects
+   status            Show the working tree status
+
+grow, mark and tweak your common history
+   branch            List, create, or delete branches
+   commit            Record changes to the repository
+   merge             Join two or more development histories together
+   rebase            Reapply commits on top of another base tip
+   reset             Reset current HEAD to the specified state
+   switch            Switch branches
+   tag               Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch             Download objects and refs from another repository
+   pull              Fetch from and integrate with another repository or a local branch
+   push              Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+See 'git help git' for an overview of the system.
+
+Akhi@MSI MINGW64 ~/piechart (main)
+$ git restore
+fatal: you must specify path(s) to restore
+
+Akhi@MSI MINGW64 ~/piechart (main)
+$ git remote -v
+origin  https://github.com/Akhilkumar0143/barchart.git (fetch)
+origin  https://github.com/Akhilkumar0143/barchart.git (push)
+
+Akhi@MSI MINGW64 ~/piechart (main)
+$ ^C
+
+Akhi@MSI MINGW64 ~/piechart (main)
+$ git remote set-url
+usage: git remote set-url [--push] <name> <newurl> [<oldurl>]
+   or: git remote set-url --add <name> <newurl>
+   or: git remote set-url --delete <name> <url>
+
+    --push                manipulate push URLs
+    --add                 add URL
+    --delete              delete URLs
+
+
+Akhi@MSI MINGW64 ~/piechart (main)
+$ git@github.com:meganensar/Akhil.git
+bash: git@github.com:meganensar/Akhil.git: No such file or directory
+
+Akhi@MSI MINGW64 ~/piechart (main)
+$ git remote -v
+origin  https://github.com/Akhilkumar0143/barchart.git (fetch)
+origin  https://github.com/Akhilkumar0143/barchart.git (push)
+
+Akhi@MSI MINGW64 ~/piechart (main)
+$ git remote add originl git@github.com:meganensar/Akhil.git
+
+Akhi@MSI MINGW64 ~/piechart (main)
+$ git remote -v
+origin  https://github.com/Akhilkumar0143/barchart.git (fetch)
+origin  https://github.com/Akhilkumar0143/barchart.git (push)
+originl git@github.com:meganensar/Akhil.git (fetch)
+originl git@github.com:meganensar/Akhil.git (push)
+
+Akhi@MSI MINGW64 ~/piechart (main)
+$ git push originl master
+error: src refspec master does not match any
+error: failed to push some refs to 'github.com:meganensar/Akhil.git'
+
+Akhi@MSI MINGW64 ~/piechart (main)
+$ git remote add originl git@github.com:meganensar/React-charts-Akhil.git
+fatal: remote originl already exists.
+
+Akhi@MSI MINGW64 ~/piechart (main)
+$ git remote -v
+origin  https://github.com/Akhilkumar0143/barchart.git (fetch)
+origin  https://github.com/Akhilkumar0143/barchart.git (push)
+originl git@github.com:meganensar/Akhil.git (fetch)
+originl git@github.com:meganensar/Akhil.git (push)
+
+Akhi@MSI MINGW64 ~/piechart (main)
+$ git remote -v
+origin  https://github.com/Akhilkumar0143/barchart.git (fetch)
+origin  https://github.com/Akhilkumar0143/barchart.git (push)
+originl git@github.com:meganensar/Akhil.git (fetch)
+originl git@github.com:meganensar/Akhil.git (push)
+
+Akhi@MSI MINGW64 ~/piechart (main)
+$ git remote add original git@github.com:meganensar/React-charts-Akhil.git
+
+Akhi@MSI MINGW64 ~/piechart (main)
+$ git remote -v
+origin  https://github.com/Akhilkumar0143/barchart.git (fetch)
+origin  https://github.com/Akhilkumar0143/barchart.git (push)
+original        git@github.com:meganensar/React-charts-Akhil.git (fetch)
+original        git@github.com:meganensar/React-charts-Akhil.git (push)
+originl git@github.com:meganensar/Akhil.git (fetch)
+originl git@github.com:meganensar/Akhil.git (push)
+
+Akhi@MSI MINGW64 ~/piechart (main)
+$ git push original master
+error: src refspec master does not match any
+error: failed to push some refs to 'github.com:meganensar/React-charts-Akhil.git'
+
+Akhi@MSI MINGW64 ~/piechart (main)
+$ git push -u original main
+The authenticity of host 'github.com (2402:3a80:1fff:3f::dea:d226)' can't be established.
+RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? y
+Please type 'yes', 'no' or the fingerprint: yes
+Warning: Permanently added 'github.com,2402:3a80:1fff:3f::dea:d226' (RSA) to the list of known hosts.
+Enumerating objects: 40, done.
+Counting objects: 100% (40/40), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (39/39), done.
+Writing objects: 100% (40/40), 174.37 KiB | 1.24 MiB/s, done.
+Total 40 (delta 9), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (9/9), done.
+To github.com:meganensar/React-charts-Akhil.git
+ * [new branch]      main -> main
+Branch 'main' set up to track remote branch 'main' from 'original'.
+
+Akhi@MSI MINGW64 ~/piechart (main)
+$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

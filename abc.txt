@@ -1,0 +1,54 @@
+surendra 
+Raja 
+gopal /nHari
+
+create table std (id int, name varchar(30), marks int, city varchar(30));
+
+insert into std values(1,"surendra", 321, "1"),
+(2, "Rajesh", 543, "2"),
+(3, "Suneel", 250, "3"),
+(4, "Raja", 220, "4"),
+(5, "Teja", 211, "5"),
+(6, "Gangu", 257, '10'),
+(7, "Mohan", 672, "11"),
+(8, "Ragu", 653, '13');
+
+
+create table city (c_id int, city_name varchar(30));
+
+insert into city values(1,"Hyd"),
+(2,  "Bng"),
+(3,  "Csk"),
+(4,  "Mob"),
+(5,  "Gu"),
+(6,  'Ra'),
+(7,  "Hr"),
+(8,  'ch');
+
+
+
+create table customers(ID int, Name varchar(30), Age int, Address varchar(30), Salary int);
+
+insert into customers values(1,"surendra", 23, "Ahmedabad", 20000),
+(2, "Rajesh", 23, "Delhi", 25000),
+(3, "Suneel", 25, "Kota", 30000),
+(4, "Raja", 22, "Mumbai", 23000),
+(5, "Teja", 21, "Bhopal", 21000),
+(6, "Gangu", 25, 'MP', 26000),
+(7, "Mohan", 32, "Karnataka", 25000),
+(8, "Ragu", 30, 'chennai', 23400);
+
+
+create table order(O_id int, customer_id int, Amount int);
+
+insert into ORDERS values(101, 3, 3000),
+(102, 3, 2500),
+(103, 4, 2000),
+(104, 4, 6750),
+(100, 1, 4530),
+(105, 2, 3450),
+(106, 2, 2200),
+(108, 4, 3342),
+(107, 1, 6752);
+
+
